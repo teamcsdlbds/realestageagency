@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #ffffff;
+    color: #312e2e;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.title-h2 {
+    color: #2b86c5;
+    padding-bottom: 15px;
+}
+
+.section-news {
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.image {
+    width: 100%;
+    border-radius: 10px;
+    transition: all 0.2s;
+    margin: 0 auto;
+}
+
+.cell {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100%;
+}
+
+.image:hover,
+.image:active {
+    cursor: pointer;
+    -ms-transform: scale(1.15); 
+    -webkit-transform: scale(1.15); 
+    transform: scale(1.15);
+
+}
+
+.logo {
+    width: 150px;
+}
+
+.icon-facebook {
+    color: rgb(9, 83, 180);
+}
+
+
+.icon-youtube {
+    color: #ce0707;
+}
+
+
+.info {
+    display: flex;
+}
+
+.bath, .area {
+    margin-left: 10px;
+}
+
+.location, .price, .info {
+    font-weight: 100;
+    
+}

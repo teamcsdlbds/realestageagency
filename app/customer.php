@@ -14,30 +14,42 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-<body>
+<body class="body-cus">
     <div class="content">
-        
         <?php 
             if (!isset($_SESSION["permision"]) || $_SESSION["permision"] == 0) {
                 include "prohibit.php";
             } else {
                 include "connection.php";
                 $userName = $_SESSION["userName"];
-                $query = "SELECT Customers.name as 'Tên khách hàng', Customers.phone as 'SĐT', Details.name as 'BĐS' FROM Details, FavoriteDetails, Customers WHERE Details.userNameAgency = '$userName' AND Details.id = FavoriteDetails.idDetail AND FavoriteDetails.userNameCustomer = Customers.userName";
+                $query = "SELECT Customers.name as 'Tên khách hàng', Customers.phone as 'SĐT', Details.name as 'BĐS', Details.url_img as 'IMG', Details.address as 'add' FROM Details, FavoriteDetails, Customers WHERE Details.userNameAgency = '$userName' AND Details.id = FavoriteDetails.idDetail AND FavoriteDetails.userNameCustomer = Customers.userName";
                 $result = $connection->query($query);
                 if ($connection->connect_error) {
                     echo "<script type='text/javascript'>alert('Vui lòng thử lại sau!');</script>";
                     header('Location: ../app/home.php');
                 } 
-                echo "<h2 class='title-h2'>Quản lý khách hàng</h2>";
+                echo "<div class='box-title'> <h2 class='title-h2 title'>Quản lý khách hàng</h2> </div>";
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
-                        echo "<div style='width:1000px; margin-right:20px;'>" . $row["Tên khách hàng"] . " " . $row["SĐT"]. " " . $row["BĐS"]. "toi"."</div>";
-                        echo "toi";
+                        echo "<div class='row item'>";
+                            echo "<div class='col span-1-of-3 col1'>";
+                                echo "<img src=\"../" . $row["IMG"] . "\"" . " alt='retail' class='image'>";
+                            echo "</div>";
+                            echo "<div class='col span-2-of-3 col2'>";
+                                echo "<div class='name-detail'>". $row["BĐS"] . "</div>";
+                                echo "<div class='address-detail'> ";
+                                    echo "<i class='fa fa-map-marker' aria-hidden='true'></i>";
+                                    echo " " . $row["add"];
+                                echo "</div><hr>";
+                                echo "<div class='customer-name'>Khách hàng: ". $row["Tên khách hàng"] . "</div>";
+                                echo "<div class='customer-phone'>SĐT:" . $row["SĐT"] . "</div>";
+                            echo "</div>";
+                        echo "</div>";
                     }
                     
                 } else {
                     echo "Chưa có khách hàng nào!";
+
                 }
             }
         ?>

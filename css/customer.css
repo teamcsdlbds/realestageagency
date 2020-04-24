@@ -1,6 +1,61 @@
 .content {
     margin-top: 80px;
-    margin-left: 75px;
-    /* margin-right: 75px; */
-    width: 30%;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    
+}
+
+.body-cus {
+    background-color: rgb(238, 238, 238);
+}
+
+.box-title {
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border: 1px solid rgb(228, 222, 222);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+.title {
+    padding: 20px 20px;
+}
+
+.item {
+    background-color: #fff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(228, 222, 222);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+.col1, .col2 {
+    padding-left: 15px;
+}
+
+.col2 {
+    padding-right: 15px;
+}
+
+.name-detail {
+    font-size: 28px;
+    font-weight: 700;
+    color:  #2b86c5;
+    padding-top: 25px;
+}
+
+.address-detail {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.customer-name {
+    font-size: 28px;
+    font-weight: 700;
+    padding-top: 20px;
+    background: -webkit-linear-gradient(#eee, #333);
+    background: -webkit-linear-gradient(280deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

@@ -24,7 +24,7 @@
                 echo "<script type='text/javascript'>alert('Vui lòng thử lại sau!');</script>";
                 header('Location: ../app/home.php');
             } 
-            echo "<div class='content'> ";
+            echo "<div class='body-content'><div class='content'> ";
             echo "<div class='box-title'> <h2 class='title-h2 title'>Quản lý Bất động sản</h2> </div>";
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
@@ -52,7 +52,7 @@
             } else {
                 echo "Chưa có bất động sản nào!";
             }
-            echo "</div>";
+            echo "</div></div>";
         }
     ?>
 </body>

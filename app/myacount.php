@@ -25,6 +25,7 @@
         </div>
         <div class="function-box box-2">
             <a href="/app/customer.php">Quản lý khách hàng</a>
+            <!-- finished -->
         </div>
         <div class="function-box box-2">
             <a href="/app/my-details.php">Quản lí BĐS</a>

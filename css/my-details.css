@@ -1,0 +1,32 @@
+.content {
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    padding-top: 90px;
+    background: #ecf0f1;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.image-title {
+    color: #2b86c5;
+    font-size: 25px;
+    font-weight: 900px;
+}
+
+.item {
+    padding-left: 30px;
+}
+
+.col2 {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+/* .title {
+    color: white !important;
+} */
+
+body {
+    background: #bdc3c7;
+}

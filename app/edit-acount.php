@@ -30,7 +30,6 @@ function test_input($data) {
 include("connection.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
     $current_userName = $_SESSION['userName'];
     $s = $_POST['sex'];
     $birthday = $_POST['birthday'];
@@ -63,28 +62,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Record updated successfully";}
     else {
         echo("Error description: " . $connection -> error);
-
-    $password = $_POST["password"];
-    $name = $_POST["name"];
-    $sex = $_POST["sex"];
-    $phone = $_POST["phone"];
-    $email = $_POST["email"];
-    $address = $_POST["address"];
-    $birthday = $_POST["birthday"];
-    $password = test_input($password);
-    if ($password == "") {
-        echo "<script type='text/javascript'>alert('Không được để trống mật khẩu!');</script>";
-    }
-    else if (in_array($userName, $row)){
-        echo "<script type='text/javascript'>alert('user name đã có người dùng, hãy chọn user name khác');</script>";
-    }
-    else
-    {
-        $query = "UPDATE Agencies SET password =  '$password', 
-                                      name = '$name', sex = '$sex', phone = '$phone', 
-                                    email = '$email', address = '$address', birthday = '$birthday' where userName = '$current_userName';";
-        header('Location: ../app/home.php');
-
     }
 
     header('Location: ../app/home.php');

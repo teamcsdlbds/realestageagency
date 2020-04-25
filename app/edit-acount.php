@@ -1,4 +1,4 @@
-
+<?php include "menu.php";?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,6 @@
     <title>Real Estate Agency | Chỉnh sửa thông tin</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/edit-acount.css">
-    <link rel="stylesheet" href="../css/grid.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -24,7 +23,6 @@ $query = "SELECT userName FROM Agencies;";
 $result = $connection->query($query);
 $row = $result->fetch_assoc();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $userName = $_POST["userName"];
     $password = $_POST["password"];
     $name = $_POST["name"];
     $sex = $_POST["sex"];
@@ -32,17 +30,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $address = $_POST["address"];
     $birthday = $_POST["birthday"];
-    $userName = test_input($userName);
     $password = test_input($password);
-    if ($userName == "" || $password == "") {
-        echo "<script type='text/javascript'>alert('Không được để trống username và mật khẩu!');</script>";
+    if ($password == "") {
+        echo "<script type='text/javascript'>alert('Không được để trống mật khẩu!');</script>";
     }
     else if (in_array($userName, $row)){
         echo "<script type='text/javascript'>alert('user name đã có người dùng, hãy chọn user name khác');</script>";
     }
     else
     {
-        $query = "UPDATE Agencies SET userName = '$userName', password =  '$password', 
+        $query = "UPDATE Agencies SET password =  '$password', 
                                       name = '$name', sex = '$sex', phone = '$phone', 
                                     email = '$email', address = '$address', birthday = '$birthday' where userName = '$current_userName';";
         header('Location: ../app/home.php');
@@ -51,18 +48,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<?php include "menu.php";?>
+
 
 <section class="section-news"  style="margin-top: 80px;">
     <form method="post" action="/app/edit-acount.php" class='account-box'>
         <h1>Chỉnh sửa thông tin cá nhân</h1>
-
-        <div class="textbox">
-            <i>User account</i>
-            <p id="p_user-account">   <?php echo $_SESSION['userName']?> </p>
-            <input id="user-account" type="text" placeholder="<?php echo $_SESSION['userName']?>" name="userName" value="" hidden>
-            <button class="btn" onclick="document.getElementById('user-account').removeAttribute('hidden'); document.getElementById('p_user-account').setAttribute('hidden', true)" type="button">Thay đổi user account</button>
-        </div>
         <div class="textbox">
             <i>Họ tên</i>
             <p id="p_name">   <?php echo $_SESSION['name']?> </p>

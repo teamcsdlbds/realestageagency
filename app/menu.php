@@ -18,7 +18,7 @@
         <li><a href="/app/agency.php" class="menu-item">Môi giới</a></li>
         <?php 
             if (isset($_SESSION["permision"]))
-                echo "<li><a href= \"/app/myacount.php\" class=\"menu-item\">" .$_SESSION['name']."</a></li>";
+                echo "<li><a href=\"/app/myacount.php\" class=\"menu-item\">" .$_SESSION['name']."</a></li>";
             else 
                 echo "<li><a href=\"/app/login.php\" class=\"menu-item\">Đăng nhập</a></li>";
         ?>

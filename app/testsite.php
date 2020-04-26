@@ -5,7 +5,8 @@
     </head>
     <body>
         <?php
-            echo "Test <br>";
+            echo "What?";
         ?>
+        </form>
     </body>
 </html>

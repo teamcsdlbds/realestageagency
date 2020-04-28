@@ -1,6 +1,6 @@
 @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 .account-box{
-    
+
     border: 1.5px solid #2b86c5;
     border-radius: 20px;
     padding: 15px 60px;
@@ -25,8 +25,10 @@
     margin: 8px 0;
     border-bottom: 1px solid #2b86c5;
 }
+
+
 .textbox i{
-    width: 26px;
+    width: 90px;
     float: left;
     text-align: center;
 }
@@ -36,7 +38,7 @@
     background: none;
     color: black;
     font-size: 18px;
-    width: 80%;
+    width: 75%;
     float: left;
     margin: 0 10px;
 }

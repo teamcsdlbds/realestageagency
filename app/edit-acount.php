@@ -98,9 +98,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <i>Giới tính</i>
             <p id="p_sex">   <?php if ($_SESSION['sex'] == 0) {echo "Nam";} else echo "Nữ";?> </p>
             <div id="d_sex" hidden>
-                <input type="radio" name="sex[]" value="0">
+                <input type="checkbox" name="sex[]" value="0">
                 <label for="male"> Nam</label><br>
-                <input type="radio" name="sex[]" value="1" >
+                <input type="checkbox" name="sex[]" value="1" style="margin-left: 100px">
                 <label for="female"> Nữ</label><br>
             </div>
             <button id="btn_sex" class="btn" onclick="document.getElementById('d_sex').removeAttribute('hidden'); document.getElementById('p_sex').setAttribute('hidden', true); document.getElementById('btn_sex').setAttribute('hidden', true)" type="button">Thay đổi giới tính</button>

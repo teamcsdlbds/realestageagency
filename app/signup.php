@@ -110,7 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div >
                 <input type="radio" name="sex[]" value="0" style="margin-left : 0">
                 <label for="male"> Nam</label><br>
-                <input type="radio" name="sex[]" value="1" style="margin-left : 100px">
+                <input type="radio" name="sex[]" value="1" style="margin-left : 90px">
                 <label for="female"> Nữ</label><br>
             </div>
         </div>

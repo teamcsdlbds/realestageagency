@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo("Error description: " . $connection -> error);
     }
 
-    header('Location: ../app/home.php');
+    header('Location: /');
 
 
 }

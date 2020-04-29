@@ -12,15 +12,15 @@
 <body>
 <header class="menu">
     <ul class="main-nav">
-        <li><a href= "/app/home.php" class="menu-item">Trang chủ</a></li>
-        <li><a href= "/app/retails.php" class="menu-item">Mua nhà</a></li>
-        <li><a href= "/app/hired.php" class="menu-item">Thuê nhà</a></li>
-        <li><a href="/app/agency.php" class="menu-item">Môi giới</a></li>
+        <li><a href= "/" class="menu-item">Trang chủ</a></li>
+        <li><a href= "/mua-nha" class="menu-item">Mua nhà</a></li>
+        <li><a href= "/thue-nha" class="menu-item">Thuê nhà</a></li>
+        <li><a href="/moi-gioi" class="menu-item">Môi giới</a></li>
         <?php 
-            if (isset($_SESSION["permision"]))
-                echo "<li><a href=\"/app/myacount.php\" class=\"menu-item\">" .$_SESSION['name']."</a></li>";
+            if (isset($_SESSION["permission"]))
+                echo "<li><a href=\"/tai-khoan\" class=\"menu-item\">" .$_SESSION['name']."</a></li>";
             else 
-                echo "<li><a href=\"/app/login.php\" class=\"menu-item\">Đăng nhập</a></li>";
+                echo "<li><a href=\"/dang-nhap\" class=\"menu-item\">Đăng nhập</a></li>";
         ?>
     </ul>
 </header>

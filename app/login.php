@@ -33,11 +33,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = $connection->query($query);
         if ($connection->connect_error) {
             echo "<script type='text/javascript'>alert('Vui lòng thử lại sau!');</script>";
-            header('Location: ../app/home.php');
+            header('Location: /');
         }
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
-            $_SESSION["permision"] = 1;
+            $_SESSION["permission"] = 1;
             $_SESSION["userName"] = $row["userName"];
             $_SESSION["name"] = $row["name"];
             $_SESSION["password"] = $row['password'];
@@ -48,13 +48,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["address"] = $row["address"];
             $_SESSION["birthday"] = $row["birthday"];
             $_SESSION["url_avt"] = $row["url_avt"];
-            header('Location: ../app/home.php');
+            header('Location: /');
         } else {
             $query = "SELECT * from Customers where userName='$userName' and password='$password';";
             $result = $connection->query($query);
             if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
-                $_SESSION["permision"] = 0;
+                $_SESSION["permission"] = 0;
                 $_SESSION["userName"] = $row["userName"];
                 $_SESSION["name"] = $row["name"];
                 $_SESSION["password"] = $row['password'];
@@ -65,15 +65,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["address"] = $row["address"];
                 $_SESSION["birthday"] = $row["birthday"];
                 $_SESSION["url_avt"] = $row["url_avt"];
-                header('Location: ../app/home.php');
+                header('Location: /');
             }
             else {
                 echo "<script type='text/javascript'>alert('Đăng nhập lại!');</script>";
             }
         }
-
     }
-    // $_SESSION[""]
 }
 ?>
 
@@ -90,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="password" placeholder="Password" name="password" value="">
         </div>
         <input class="btn" type="submit" name="login" value="Đăng nhập">
-        <a href="/app/signup.php">Đăng ký khách hàng mới?</a>
+        <a href="/dang-ky">Đăng ký khách hàng mới?</a>
     </form>
 </section>
 </body>

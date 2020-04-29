@@ -30,8 +30,10 @@
         <h2 class="title-h2">Nhà lẻ bán</h2>
         <div class="row" style="font-size: 15px;">
             <div class="col span-1-of-4 cell">
-                <img src="../image/img-retail-001.jpg" alt="retail" class="image">
-                <div class="image-title"><b>Căn hộ số M3-3205 Vinhomes Metropolis, 29 Liễu Giai</b></div>
+                <a href="/">
+                    <img src="../image/img-retail-001.jpg" alt="retail" class="image">
+                    <div class="image-title"><b>Căn hộ số M3-3205 Vinhomes Metropolis, 29 Liễu Giai</b></div>
+                </a>
                 <div class="location">
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                     Liễu Giai- Kim Mã -Ba Đình- Hà Nội

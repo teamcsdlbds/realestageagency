@@ -17,21 +17,21 @@
     ?>
     <div class="frame">
         <div class="function-box box-1">
-            <a href="/app/edit-account.php">Chỉnh sửa thông tin</a>
+            <a href="/chinh-sua-thong-tin">Chỉnh sửa thông tin</a>
         </div>
         <div class="function-box box-1">
             <a href="/app/logout.php">Đăng xuất</a>
             <!-- finished -->
         </div>
         <div class="function-box box-2">
-            <a href="/app/customer.php">Quản lý khách hàng</a>
+            <a href="/khach-hang">Quản lý khách hàng</a>
             <!-- finished -->
         </div>
         <div class="function-box box-2">
-            <a href="/app/my-details.php">Quản lí BĐS</a>
+            <a href="/quan-ly-bds">Quản lý BĐS</a>
         </div>
         <div class="function-box box-2">
-            <a href="/app/favorite-details.php">BĐS quan tâm</a>
+            <a href="/bds-quan-tam">BĐS quan tâm</a>
         </div>
     </div>
 </body>

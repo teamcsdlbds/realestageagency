@@ -74,19 +74,7 @@ a:hover, a:active {
 }
 
 .item {
-    /* margin-left: 120px; */
     width: 10%;
-    /* display: flex; */
-    /* margin: 20px 0px; */
-    /* float: left; */
     text-align: left;
     margin-left: 50px;
-    /* display: flex; */
-    /* display: block; */
-    /* background: #ccc; */
 }
-/* 
-#d_sex {
-    margin-left: 50px;
-    margin-top: 20px;
-} */

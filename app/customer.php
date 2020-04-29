@@ -13,7 +13,7 @@
 <body> 
     <?php 
         include "menu.php";
-        if (!isset($_SESSION["permision"]) || $_SESSION["permision"] == 0) {
+        if (!isset($_SESSION["permission"]) || $_SESSION["permission"] == 0) {
             include "prohibit.php";
         } else {
             include "connection.php";

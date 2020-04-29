@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
-            $_SESSION["permision"] = 1;
+            $_SESSION["permission"] = 1;
             $_SESSION["userName"] = $row["userName"];
             $_SESSION["name"] = $row["name"];
             $_SESSION["password"] = $row['password'];
@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $result = $connection->query($query);
             if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
-                $_SESSION["permision"] = 0;
+                $_SESSION["permission"] = 0;
                 $_SESSION["userName"] = $row["userName"];
                 $_SESSION["name"] = $row["name"];
                 $_SESSION["password"] = $row['password'];

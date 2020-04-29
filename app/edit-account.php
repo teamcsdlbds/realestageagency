@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Estate Agency | Chỉnh sửa thông tin</title>
     <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/edit-acount.css">
+    <link rel="stylesheet" href="../css/edit-account.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script> var check = function() {
             if (document.getElementById('password').value ==
@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 <section class="section-news"  style="margin-top: 80px;">
-    <form method="post" action="/app/edit-acount.php" class='account-box'>
+    <form method="post" action="/app/edit-account.php" class='account-box'>
         <h1>Chỉnh sửa thông tin cá nhân</h1>
         <div class="textbox">
             <i>Họ tên</i>
@@ -129,7 +129,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input id="birthday" type="date" name="birthday" value="" hidden>
             <button id="btn_bd" class="btn" onclick="document.getElementById('birthday').removeAttribute('hidden'); document.getElementById('p_birthday').setAttribute('hidden', true);document.getElementById('btn_bd').setAttribute('hidden', true)" type="button">Thay đổi ngày sinh</button>
         </div>
-        <input class="btn" type="submit" name="edit-acount" value="Xác nhận">
+        <input class="btn" type="submit" name="edit-account" value="Xác nhận">
     </form>
 </section>
 </body>

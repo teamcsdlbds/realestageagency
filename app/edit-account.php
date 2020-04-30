@@ -34,38 +34,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $current_userName = $_SESSION['userName'];
     $s = $_POST['sex'];
     $birthday = $_POST['birthday'];
-    foreach ($s as $sex)
+    if (!empty($s)) foreach ($s as $sex)
     {
         if ($sex != null) $s = $sex;
-    }
+    } else $s = '';
 
     //$birthday = $_POST['birthday'];
     //echo "<script type='text/javascript'>alert($s);</script>";
     //die;
 
-    if($_POST["name"] == "") {$name = $_SESSION['name'];} else $name = $_POST["name"];
-    if($_POST["phone"] == "") {$phone = $_SESSION['phone'];} else $phone = $_POST["phone"];
-    if($_POST["email"] == "") {$email = $_SESSION['email'];} else $email = $_POST["email"];
-    if($_POST["address"] == "") {$address = $_SESSION['address'];} else $address = $_POST["address"];
+    if(empty($_POST["name"])) {$name = $_SESSION['name'];} else $name = $_POST["name"];
+    if(empty($_POST["phone"])) {$phone = $_SESSION['phone'];} else $phone = $_POST["phone"];
+    if(empty($_POST["email"])) {$email = $_SESSION['email'];} else $email = $_POST["email"];
+    if(empty($_POST["address"])) {$address = $_SESSION['address'];} else $address = $_POST["address"];
     if(empty($_POST["birthday"])) {$birthday = $_SESSION['birthday'];} else $birthday = $_POST["birthday"];
-    if($_POST["password"] == "") {$password = $_SESSION['password'];} else $password = $_POST["password"];
+    if(empty($_POST["password"]) || $_POST['password'] == '') {$password = $_SESSION['password'];} else $password = $_POST["password"];
     if(empty($_POST["sex"])) {$s = $_SESSION['sex'];}
     //if($_POST["sex"] == "") {$sex = $_SESSION['sex'];} else $sex = $_POST["sex"];
-    $password = $_POST['password'];
-    $password = test_input($password);
+
     //birthday = '$birthday'
     $type = '';
     if($_SESSION['permission'] == 0){$type = 'Customers';} else {$type = 'Agencies';}
-    $query = "UPDATE {'$type'} SET password =  '$password', sex = '$s', 
+    $query = "UPDATE {$type} SET password =  '$password', sex = '$s', 
                                       name = '$name',  phone = '$phone', 
                                     email = '$email', birthday = '$birthday', address = '$address' where userName = '$current_userName';";
     if ($connection->connect_error) {
         die("Connection failed: " . $connection->connect_error);}
     if ($connection->query($query) === TRUE) {
         echo "Record updated successfully";
+        $_SESSION["name"] = $name;
+        $_SESSION["password"] = $password;
+        $_SESSION["sex"] = $s;
+        $_SESSION["phone"] = $phone;
+        $_SESSION["email"] = $email;
+        $_SESSION["address"] = $address;
+        $_SESSION["birthday"] = $birthday;
+
     }
     else {
         echo("Error description: " . $connection -> error);
+        echo "<p><br><br><br><br><br><br><br><br><br><br><br><br> Error description:. $connection->error<br>'$query'</p>";
+        die;
     }
 
     header('Location: /');

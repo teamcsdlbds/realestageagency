@@ -54,7 +54,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
     $password = test_input($password);
     //birthday = '$birthday'
-    $query = "UPDATE Customers SET password =  '$password', sex = '$s', 
+    $type = '';
+    if($_SESSION['permission'] == 0){$type = 'Customers';} else {$type = 'Agencies';}
+    $query = "UPDATE {'$type'} SET password =  '$password', sex = '$s', 
                                       name = '$name',  phone = '$phone', 
                                     email = '$email', birthday = '$birthday', address = '$address' where userName = '$current_userName';";
     if ($connection->connect_error) {
@@ -88,16 +90,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="textbox">
                     <i>Giới tính</i>
                     <p id="p_sex">   <?php if ($_SESSION['sex'] == 0) {echo "Nam";} else echo "Nữ";?> </p>
-                    <div id="d_sex" hidden>                       
+                    <div id="d_sex" hidden>
                         <div class="item">
-                            <input type="radio" name="sex[]" value="0" style="margin-top: 10px;"> 
+                            <input type="radio" name="sex[]" value="0" style="margin-top: 10px;">
                             <div style="margin-left:20px; margin-top:-18px;">Nam</div>
                         </div>
                         <div class="item">
-                            <input type="radio" name="sex[]" value="1" style="margin-top: 10px;"> 
+                            <input type="radio" name="sex[]" value="1" style="margin-top: 10px;">
                             <div style="margin-left:20px; margin-top:-18px;">Nữ</div>
                         </div>
-                        
+
                     </div>
                     <button id="btn_sex" class="btn" onclick="document.getElementById('d_sex').removeAttribute('hidden'); document.getElementById('p_sex').setAttribute('hidden', true); document.getElementById('btn_sex').setAttribute('hidden', true)" type="button">Thay đổi giới tính</button>
                 </div>
@@ -141,7 +143,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <button id="btn_bd" class="btn" onclick="document.getElementById('birthday').removeAttribute('hidden'); document.getElementById('p_birthday').setAttribute('hidden', true);document.getElementById('btn_bd').setAttribute('hidden', true)" type="button">Thay đổi ngày sinh</button>
                 </div>
             </div>
-        </div> 
+        </div>
         <input class="btn" type="submit" name="edit-account" value="Xác nhận">
     </form>
 </section>

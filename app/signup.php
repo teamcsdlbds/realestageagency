@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Estate Agency | Đăng ký</title>
     <link rel="stylesheet" href="../css/common.css">
-
-    <link rel="stylesheet" href="../css/sign-up.css">
-
-
+    <link rel="stylesheet" href="../css/edit-account.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script> var check = function() {
             if (document.getElementById('password').value ==

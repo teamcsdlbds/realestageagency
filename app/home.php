@@ -28,275 +28,97 @@
     </section>
     <section class="section-news retails retails-home">
         <h2 class="title-h2">Nhà lẻ bán</h2>
-        <div class="row" style="font-size: 15px;">
-            <div class="col span-1-of-4 cell">
-                <a href="/detail/567" style="text-decoration: none;">
-                    <img src="../image/img-retail-001.jpg" alt="retail" class="image">
-                    <div class="image-title"><b>Căn hộ số M3-3205 Vinhomes Metropolis, 29 Liễu Giai</b></div>
-                </a>
-                <div class="location">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Liễu Giai- Kim Mã -Ba Đình- Hà Nội
-                </div>
-                <div class="price">                 
-                    <b>Giá: ~ 3,31 tỷ</b>
-                </div>
-                <div class="info">  
-                    <div class="bed"><i class="fa fa-bed" aria-hidden="true"></i> 2</div>
-                    <div class="bath"><i class="fa fa-bath" aria-hidden="true"></i> 2</div>
-                    <div class="area"><i class="fa fa-home" aria-hidden="true"></i> 83m2</div>
-                </div>
-            </div>
-            <div class="col span-1-of-4 cell">
-                <img src="../image/img-retail-002.jpg" alt="retail" class="image">
-                <div class="image-title"><b>Căn hộ số M3-3205 Vinhomes Metropolis, 29 Liễu Giai</b></div>
-                <div class="location">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Liễu Giai- Kim Mã -Ba Đình- Hà Nội
-                </div>
-                <div class="price">                 
-                    <b>Giá: ~ 3,31 tỷ</b>
-                </div>
-                <div class="info">  
-                    <div class="bed"><i class="fa fa-bed" aria-hidden="true"></i> 2</div>
-                    <div class="bath"><i class="fa fa-bath" aria-hidden="true"></i> 2</div>
-                    <div class="area"><i class="fa fa-home" aria-hidden="true"></i> 83m2</div>
-                </div>
-            </div>
-            <div class="col span-1-of-4 cell">
-                <img src="../image/img-retail-003.png" alt="retail" class="image">
-                <div class="image-title"><b>Căn hộ số M3-3205 Vinhomes Metropolis, 29 Liễu Giai</b></div>
-                <div class="location">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Liễu Giai- Kim Mã -Ba Đình- Hà Nội
-                </div>
-                <div class="price">                 
-                    <b>Giá: ~ 3,31 tỷ</b>
-                </div>
-                <div class="info">  
-                    <div class="bed"><i class="fa fa-bed" aria-hidden="true"></i> 2</div>
-                    <div class="bath"><i class="fa fa-bath" aria-hidden="true"></i> 2</div>
-                    <div class="area"><i class="fa fa-home" aria-hidden="true"></i> 83m2</div>
-                </div>
-            </div>
-            <div class="col span-1-of-4 cell">
-                <img src="../image/img-retail-004.png" alt="retail" class="image">
-                <div class="image-title"><b>Căn hộ số M3-3205 Vinhomes Metropolis, 29 Liễu Giai</b></div>
-                <div class="location">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Liễu Giai- Kim Mã -Ba Đình- Hà Nội
-                </div>
-                <div class="price">                 
-                    <b>Giá: ~ 3,31 tỷ</b>
-                </div>
-                <div class="info">  
-                    <div class="bed"><i class="fa fa-bed" aria-hidden="true"></i> 2</div>
-                    <div class="bath"><i class="fa fa-bath" aria-hidden="true"></i> 2</div>
-                    <div class="area"><i class="fa fa-home" aria-hidden="true"></i> 83m2</div>
-                </div>
-            </div>
-        </div>
-        <div class="row" style="font-size: 15px;">
-            <div class="col span-1-of-4 cell">
-                <img src="../image/img-retail-001.jpg" alt="retail" class="image">
-                <div class="image-title"><b>Căn hộ số M3-3205 Vinhomes Metropolis, 29 Liễu Giai</b></div>
-                <div class="location">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Liễu Giai- Kim Mã -Ba Đình- Hà Nội
-                </div>
-                <div class="price">                 
-                    <b>Giá: ~ 3,31 tỷ</b>
-                </div>
-                <div class="info">  
-                    <div class="bed"><i class="fa fa-bed" aria-hidden="true"></i> 2</div>
-                    <div class="bath"><i class="fa fa-bath" aria-hidden="true"></i> 2</div>
-                    <div class="area"><i class="fa fa-home" aria-hidden="true"></i> 83m2</div>
-                </div>
-            </div>
-            <div class="col span-1-of-4 cell">
-                <img src="../image/img-retail-002.jpg" alt="retail" class="image">
-                <div class="image-title"><b>Căn hộ số M3-3205 Vinhomes Metropolis, 29 Liễu Giai</b></div>
-                <div class="location">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Liễu Giai- Kim Mã -Ba Đình- Hà Nội
-                </div>
-                <div class="price">                 
-                    <b>Giá: ~ 3,31 tỷ</b>
-                </div>
-                <div class="info">  
-                    <div class="bed"><i class="fa fa-bed" aria-hidden="true"></i> 2</div>
-                    <div class="bath"><i class="fa fa-bath" aria-hidden="true"></i> 2</div>
-                    <div class="area"><i class="fa fa-home" aria-hidden="true"></i> 83m2</div>
-                </div>
-            </div>
-            <div class="col span-1-of-4 cell">
-                <img src="../image/img-retail-003.png" alt="retail" class="image">
-                <div class="image-title"><b>Căn hộ số M3-3205 Vinhomes Metropolis, 29 Liễu Giai</b></div>
-                <div class="location">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Liễu Giai- Kim Mã -Ba Đình- Hà Nội
-                </div>
-                <div class="price">                 
-                    <b>Giá: ~ 3,31 tỷ</b>
-                </div>
-                <div class="info">  
-                    <div class="bed"><i class="fa fa-bed" aria-hidden="true"></i> 2</div>
-                    <div class="bath"><i class="fa fa-bath" aria-hidden="true"></i> 2</div>
-                    <div class="area"><i class="fa fa-home" aria-hidden="true"></i> 83m2</div>
-                </div>
-            </div>
-            <div class="col span-1-of-4 cell">
-                <img src="../image/img-retail-004.png" alt="retail" class="image">
-                <div class="image-title"><b>Căn hộ số M3-3205 Vinhomes Metropolis, 29 Liễu Giai</b></div>
-                <div class="location">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Liễu Giai- Kim Mã -Ba Đình- Hà Nội
-                </div>
-                <div class="price">                 
-                    <b>Giá: ~ 3,31 tỷ</b>
-                </div>
-                <div class="info">  
-                    <div class="bed"><i class="fa fa-bed" aria-hidden="true"></i> 2</div>
-                    <div class="bath"><i class="fa fa-bath" aria-hidden="true"></i> 2</div>
-                    <div class="area"><i class="fa fa-home" aria-hidden="true"></i> 83m2</div>
-                </div>
-            </div>
-        </div>
+        <?php
+            include "connection.php";
+            $query = "SELECT * FROM Details WHERE Details.type = 0";
+            $result = $connection->query($query);
+            if ($connection->connect_error) {
+                header('Location: ../app/home.php');
+            }
+            if ($result->num_rows > 0) {
+                $totalCells = 0;
+                $rows = 0;
+                while ($row = $result->fetch_assoc()) {
+                    if ($totalCells == 8) break;
+                    if ($rows == 0) {
+                        echo "<div class='row' style='font-size: 15px;'>";
+                    }
+                    if ($rows < 4) {
+                        echo "<div class='col span-1-of-4 cell'>";
+                            echo "<a href=\"/detail/" . $row["id"] . "\" style='text-decoration: none;'>";
+                                echo "<img src=\"../" . $row["url_img"] . "\"" . " alt='retail' class='image'>";
+                                echo "<div class='image-title'><b>" . $row["name"] . "</b></div>";
+                            echo "</a>";
+                            echo "<div class='location'>";
+                                echo "<i class='fa fa-map-marker' aria-hidden='true'></i> " . $row["address"];
+                            echo "</div>";
+                            echo "<div class='price'>";
+                                echo "<b>Giá: ~ " . $row["price"] . " tỷ</b>";
+                            echo "</div>";
+                            echo "<div class='info'>";
+                                echo "<div class='bed'><i class='fa fa-bed' aria-hidden='true'></i> " . $row["room"] . "</div>";
+                                echo "<div class='bath'><i class='fa fa-bath' aria-hidden='true'></i> " . $row["wc"] . "</div>";
+                                echo "<div class='area'><i class='fa fa-home' aria-hidden='true'></i> " . $row["area"] . "</div>";
+                            echo "</div>";
+                        echo "</div>";
+                    $rows++;
+                    $totalCells++;
+                    }
+                    if ($rows == 4) {
+                        echo "</div>";
+                        $rows = 0;
+                    }
+                }
+                if ($rows < 4) echo "</div>";
+            }
+        ?>
     </section>
     <section class="section-news hired">
         <h2 class="title-h2">Nhà lẻ cho thuê</h2>
-        <div class="row" style="font-size: 15px;">
-            <div class="col span-1-of-4 cell">
-                <img src="../image/img-retail-001.jpg" alt="retail" class="image">
-                <div class="image-title"><b>Căn hộ số M3-3205 Vinhomes Metropolis, 29 Liễu Giai</b></div>
-                <div class="location">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Liễu Giai- Kim Mã -Ba Đình- Hà Nội
-                </div>
-                <div class="price">                 
-                    <b>Giá: ~ 3,31 tỷ</b>
-                </div>
-                <div class="info">  
-                    <div class="bed"><i class="fa fa-bed" aria-hidden="true"></i> 2</div>
-                    <div class="bath"><i class="fa fa-bath" aria-hidden="true"></i> 2</div>
-                    <div class="area"><i class="fa fa-home" aria-hidden="true"></i> 83m2</div>
-                </div>
-            </div>
-            <div class="col span-1-of-4 cell">
-                <img src="../image/img-retail-002.jpg" alt="retail" class="image">
-                <div class="image-title"><b>Căn hộ số M3-3205 Vinhomes Metropolis, 29 Liễu Giai</b></div>
-                <div class="location">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Liễu Giai- Kim Mã -Ba Đình- Hà Nội
-                </div>
-                <div class="price">                 
-                    <b>Giá: ~ 3,31 tỷ</b>
-                </div>
-                <div class="info">  
-                    <div class="bed"><i class="fa fa-bed" aria-hidden="true"></i> 2</div>
-                    <div class="bath"><i class="fa fa-bath" aria-hidden="true"></i> 2</div>
-                    <div class="area"><i class="fa fa-home" aria-hidden="true"></i> 83m2</div>
-                </div>
-            </div>
-            <div class="col span-1-of-4 cell">
-                <img src="../image/img-retail-003.png" alt="retail" class="image">
-                <div class="image-title"><b>Căn hộ số M3-3205 Vinhomes Metropolis, 29 Liễu Giai</b></div>
-                <div class="location">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Liễu Giai- Kim Mã -Ba Đình- Hà Nội
-                </div>
-                <div class="price">                 
-                    <b>Giá: ~ 3,31 tỷ</b>
-                </div>
-                <div class="info">  
-                    <div class="bed"><i class="fa fa-bed" aria-hidden="true"></i> 2</div>
-                    <div class="bath"><i class="fa fa-bath" aria-hidden="true"></i> 2</div>
-                    <div class="area"><i class="fa fa-home" aria-hidden="true"></i> 83m2</div>
-                </div>
-            </div>
-            <div class="col span-1-of-4 cell">
-                <img src="../image/img-retail-004.png" alt="retail" class="image">
-                <div class="image-title"><b>Căn hộ số M3-3205 Vinhomes Metropolis, 29 Liễu Giai</b></div>
-                <div class="location">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Liễu Giai- Kim Mã -Ba Đình- Hà Nội
-                </div>
-                <div class="price">                 
-                    <b>Giá: ~ 3,31 tỷ</b>
-                </div>
-                <div class="info">  
-                    <div class="bed"><i class="fa fa-bed" aria-hidden="true"></i> 2</div>
-                    <div class="bath"><i class="fa fa-bath" aria-hidden="true"></i> 2</div>
-                    <div class="area"><i class="fa fa-home" aria-hidden="true"></i> 83m2</div>
-                </div>
-            </div>
-        </div>
-        <div class="row" style="font-size: 15px;">
-            <div class="col span-1-of-4 cell">
-                <img src="../image/img-retail-001.jpg" alt="retail" class="image">
-                <div class="image-title"><b>Căn hộ số M3-3205 Vinhomes Metropolis, 29 Liễu Giai</b></div>
-                <div class="location">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Liễu Giai- Kim Mã -Ba Đình- Hà Nội
-                </div>
-                <div class="price">                 
-                    <b>Giá: ~ 3,31 tỷ</b>
-                </div>
-                <div class="info">  
-                    <div class="bed"><i class="fa fa-bed" aria-hidden="true"></i> 2</div>
-                    <div class="bath"><i class="fa fa-bath" aria-hidden="true"></i> 2</div>
-                    <div class="area"><i class="fa fa-home" aria-hidden="true"></i> 83m2</div>
-                </div>
-            </div>
-            <div class="col span-1-of-4 cell">
-                <img src="../image/img-retail-002.jpg" alt="retail" class="image">
-                <div class="image-title"><b>Căn hộ số M3-3205 Vinhomes Metropolis, 29 Liễu Giai</b></div>
-                <div class="location">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Liễu Giai- Kim Mã -Ba Đình- Hà Nội
-                </div>
-                <div class="price">                 
-                    <b>Giá: ~ 3,31 tỷ</b>
-                </div>
-                <div class="info">  
-                    <div class="bed"><i class="fa fa-bed" aria-hidden="true"></i> 2</div>
-                    <div class="bath"><i class="fa fa-bath" aria-hidden="true"></i> 2</div>
-                    <div class="area"><i class="fa fa-home" aria-hidden="true"></i> 83m2</div>
-                </div>
-            </div>
-            <div class="col span-1-of-4 cell">
-                <img src="../image/img-retail-003.png" alt="retail" class="image">
-                <div class="image-title"><b>Căn hộ số M3-3205 Vinhomes Metropolis, 29 Liễu Giai</b></div>
-                <div class="location">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Liễu Giai- Kim Mã -Ba Đình- Hà Nội
-                </div>
-                <div class="price">                 
-                    <b>Giá: ~ 3,31 tỷ</b>
-                </div>
-                <div class="info">  
-                    <div class="bed"><i class="fa fa-bed" aria-hidden="true"></i> 2</div>
-                    <div class="bath"><i class="fa fa-bath" aria-hidden="true"></i> 2</div>
-                    <div class="area"><i class="fa fa-home" aria-hidden="true"></i> 83m2</div>
-                </div>
-            </div>
-            <div class="col span-1-of-4 cell">
-                <img src="../image/img-retail-004.png" alt="retail" class="image">
-                <div class="image-title"><b>Căn hộ số M3-3205 Vinhomes Metropolis, 29 Liễu Giai</b></div>
-                <div class="location">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Liễu Giai- Kim Mã -Ba Đình- Hà Nội
-                </div>
-                <div class="price">                 
-                    <b>Giá: ~ 3,31 tỷ</b>
-                </div>
-                <div class="info">  
-                    <div class="bed"><i class="fa fa-bed" aria-hidden="true"></i> 2</div>
-                    <div class="bath"><i class="fa fa-bath" aria-hidden="true"></i> 2</div>
-                    <div class="area"><i class="fa fa-home" aria-hidden="true"></i> 83m2</div>
-                </div>
-            </div>
-        </div>
+        <?php
+            include "connection.php";
+            $query = "SELECT * FROM Details WHERE Details.type = 1";
+            $result = $connection->query($query);
+            if ($connection->connect_error) {
+                header('Location: ../app/home.php');
+            }
+            if ($result->num_rows > 0) {
+                $totalCells = 0;
+                $rows = 0;
+                while ($row = $result->fetch_assoc()) {
+                    if ($totalCells == 8) break;
+                    if ($rows == 0) {
+                        echo "<div class='row' style='font-size: 15px;'>";
+                    }
+                    if ($rows < 4) {
+                        echo "<div class='col span-1-of-4 cell'>";
+                            echo "<a href=\"/detail/" . $row["id"] . "\" style='text-decoration: none;'>";
+                                echo "<img src=\"../" . $row["url_img"] . "\"" . " alt='retail' class='image'>";
+                                echo "<div class='image-title'><b>" . $row["name"] . "</b></div>";
+                            echo "</a>";
+                            echo "<div class='location'>";
+                                echo "<i class='fa fa-map-marker' aria-hidden='true'></i> " . $row["address"];
+                            echo "</div>";
+                            echo "<div class='price'>";
+                                echo "<b>Giá: ~ " . $row["price"] . " triệu/tháng</b>";
+                            echo "</div>";
+                            echo "<div class='info'>";
+                                echo "<div class='bed'><i class='fa fa-bed' aria-hidden='true'></i> " . $row["room"] . "</div>";
+                                echo "<div class='bath'><i class='fa fa-bath' aria-hidden='true'></i> " . $row["wc"] . "</div>";
+                                echo "<div class='area'><i class='fa fa-home' aria-hidden='true'></i> " . $row["area"] . "</div>";
+                            echo "</div>";
+                        echo "</div>";
+                    $rows++;
+                    $totalCells++;
+                    }
+                    if ($rows == 4) {
+                        echo "</div>";
+                        $rows = 0;
+                    }
+                }
+                if ($rows < 4) echo "</div>";
+            }
+        ?>
     </section>
     <footer class="footer-home" style="font-size: 18px;">
         <div class="row">

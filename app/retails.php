@@ -28,8 +28,10 @@
                     }
                     if ($rows < 4) {
                         echo "<div class='col span-1-of-4 cell'>";
-                            echo "<img src=\"../" . $row["url_img"] . "\"" . " alt='retail' class='image'>";
-                            echo "<div class='image-title'><b>" . $row["name"] . "</b></div>";
+                            echo "<a href=\"/detail/" . $row["id"] . "\" style='text-decoration: none;'>";
+                                echo "<img src=\"../" . $row["url_img"] . "\"" . " alt='retail' class='image'>";
+                                echo "<div class='image-title'><b>" . $row["name"] . "</b></div>";
+                            echo "</a>";
                             echo "<div class='location'>";
                                 echo "<i class='fa fa-map-marker' aria-hidden='true'></i> " . $row["address"];
                             echo "</div>";

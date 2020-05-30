@@ -1,4 +1,3 @@
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +10,25 @@
 
 </head>
 <body style="background: rgb(238, 238, 238);"> 
+
+    <!-- <div class="temp" style="padding-top: 50px;">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo laudantium molestiae repudiandae dolorem ipsa necessitatibus ducimus at, ea ipsam minima quae, excepturi dicta! Expedita earum odio aliquam quaerat modi voluptate.
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non ipsa excepturi, consequatur dignissimos, quisquam dolorum rerum debitis fugit aperiam optio reiciendis. Est ab culpa velit provident nulla omnis fuga exercitationem!
+    </div>
+    <div class="box_special">
+        <div class="title_box_special" style="padding: 15px 20px;">
+            <div class="name_bds bold_title_box"><b>Nhà số A1</b></div>
+            <div class="address_bds" style="padding-top: 12px;"><i class='fa fa-map-marker' aria-hidden='true'></i> 275 Trần Quốc Hoàn, Bắc Từ Liêm</div>           
+        </div>
+        <div class="imgBDS">
+            <img src="../image/image-retail-1.jpg" alt="detail"  style="width: 100%;">
+        </div>
+        <div class="info_cus" style="padding: 15px 20px;">
+            <div class="name_cus bold_title_box info_cus_line"><b>Nguyễn Đức Tới</b></div>
+            <div class="sdt_cus but_info_cus info_cus_line">0982768798</div><br>
+            <div class="email_cus but_info_cus">phuoail.com</div>
+        </div>
+    </div> -->
     
     <?php 
         include "menu.php";
@@ -19,37 +37,48 @@
         } else {
             include "connection.php";
             $userName = $_SESSION["userName"];
-            $query = "SELECT Customers.name as 'Tên khách hàng', Customers.phone as 'SĐT', Details.name as 'BĐS', Details.url_img as 'IMG', Details.address as 'add' FROM Details, FavoriteDetails, Customers WHERE Details.userNameAgency = '$userName' AND Details.id = FavoriteDetails.idDetail AND FavoriteDetails.userNameCustomer = Customers.userName";
+            $query = "SELECT Customers.name as 'Tên khách hàng', Customers.email as 'email', Customers.phone as 'SĐT', Details.name as 'BĐS', Details.url_img as 'IMG', Details.address as 'add' FROM Details, FavoriteDetails, Customers WHERE Details.userNameAgency = '$userName' AND Details.id = FavoriteDetails.idDetail AND FavoriteDetails.userNameCustomer = Customers.userName";
             $result = $connection->query($query);
             if ($connection->connect_error) {
                 echo "<script type='text/javascript'>alert('Vui lòng thử lại sau!');</script>";
                 header('Location: ../app/home.php');
             } 
             echo "<div class='body-cus'> <div class='content'> ";
+            
             echo "<div class=\"tab box-title\">";
                 echo "<button id=\"tab-default\" class=\"tablinks title-h2 title\" onclick=\"openTab(event, 'tab1')\"><b>Quản lý khách hàng</b></button>";
                 echo "<button class=\"tablinks title-h2 title\" onclick=\"openTab(event, 'tab2')\"><b>Danh sách khách hàng</b></button>";
             echo "</div>";
             echo "<div id=\"tab1\" class=\"tabcontent\">";
                 if ($result->num_rows > 0) {
+                    $num_box = 0;
                     while ($row = $result->fetch_assoc()) {
-                        echo "<div class='row item'>";
-                            echo "<div class='col span-1-of-3 col1'>";
-                                echo "<img src=\"../" . $row["IMG"] . "\"" . " alt='retail' class='image'>";
+                        if ($num_box == 0) {
+                            echo "<div class=\"row\">";
+                        }
+                        echo "<div class=\"box_special col span-1-of-3\">";
+                        echo "<div class=\"title_box_special\" style=\"padding: 15px 20px;\">";
+                        echo "<div class=\"name_bds bold_title_box\"><b>".$row["BĐS"]."</b></div>";
+                        echo "<div class=\"address_bds\" style=\"padding-top: 12px;\"><i class='fa fa-map-marker' aria-hidden='true'></i>"." ".$row["add"]."</div>";
+                        echo "</div>";
+                        echo "<div class=\"imgBDS\">";
+                        echo "<img src=\"../".$row["IMG"]."\" style=\"width: 100%;\">";
+                        echo "</div>";
+                        echo "<div class=\"info_cus\" style=\"padding: 15px 20px;\">";
+                        echo "<div class=\"name_cus bold_title_box info_cus_line\"><b>".$row["Tên khách hàng"]."</b></div>";
+                        echo "<div class=\"sdt_cus but_info_cus info_cus_line\"><i class=\"fa fa-phone\"></i>"." ".$row["SĐT"]."</div><br>";
+                        echo "<div class=\"email_cus but_info_cus\"><i class=\"fa fa-envelope\">    </i>"." ".$row["email"]."</div>";
+                        echo "</div>";
+                        echo "</div>";
+                        $num_box++;
+                        if ($num_box == 3) {
                             echo "</div>";
-                            echo "<div class='col span-2-of-3 col2'>";
-                                echo "<div class='name-detail'>". $row["BĐS"] . "</div>";
-                                echo "<div class='address-detail'> ";
-                                    echo "<i class='fa fa-map-marker' aria-hidden='true'></i>";
-                                    echo " " . $row["add"];
-                                echo "</div><hr>";
-                                echo "<div class='customer-name'>Khách hàng: ". $row["Tên khách hàng"] . "</div>";
-                                echo "<div class='customer-phone'>SĐT:" . $row["SĐT"] . "</div>";
-                            echo "</div>";
+                            $num_box = 0;
+                        }
+                    }
+                    if ($num_box > 0) {
                         echo "</div>";
                     }
-                } else {
-                    echo "Chưa có khách hàng nào!";
                 }
             echo "</div>";
 
@@ -80,6 +109,7 @@
             echo "</div> </div>";
         }
     ?>
+    <?php include "footer.php";?>
 <script>
 function openTab(evt, typeTab) {
     var i, tabcontent, tablinks;
@@ -97,4 +127,3 @@ function openTab(evt, typeTab) {
 document.getElementById('tab-default').click();
 </script>
 </body>
-</html>

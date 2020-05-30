@@ -120,31 +120,6 @@
             }
         ?>
     </section>
-    <footer class="footer-home" style="font-size: 18px;">
-        <div class="row">
-            <div class="col span-2-of-4 cell info-company">
-                <div><img src="../image/logo-batdongsan.png" alt="logo" class="logo"></div>
-                <div class="location">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Số 245 Nguyễn Ngọc Vũ <br>
-                    Trung Hòa, Cầu Giấy, Hà Nội
-                </div>
-                <div class="hotline"><i class="fa fa-phone" aria-hidden="true"></i> <b>18006668</b> </div>
-                <div class="email"><i class="fa fa-envelope" aria-hidden="true"></i> <b >hotro@batdongsan.vn</b> </div>
-            </div>
-            <div class="col span-1-of-4 cell">
-                <h2 style="padding-top: 80px; padding-bottom: 15px;">Tìm hiểu thêm</h2>
-                Dự án Bất động sản <br>
-                Nhà bán <br>
-                Nhà cho thuê <br>
-                Điều khoản sử dụng
-            </div>
-            <div class="col span-1-of-4 cell" style="padding-top: 80px;">
-                <div><img src="../image/dathongbao.png" alt="logo" class="logo"></div>
-                <i class="fa fa-facebook-official fa-5x icon-facebook" aria-hidden="true"></i>
-                <i class="fa fa-youtube-play fa-5x icon-youtube" style="padding-left: 10px;"  aria-hidden="true"></i>
-            </div>
-        </div>
-    </footer>
+    <?php include "footer.php";?>
 </body>
 </html>

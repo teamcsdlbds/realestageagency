@@ -11,6 +11,24 @@
 
 </head>
 <body> 
+<div class="temp" style="padding-top: 50px;">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo laudantium molestiae repudiandae dolorem ipsa necessitatibus ducimus at, ea ipsam minima quae, excepturi dicta! Expedita earum odio aliquam quaerat modi voluptate.
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non ipsa excepturi, consequatur dignissimos, quisquam dolorum rerum debitis fugit aperiam optio reiciendis. Est ab culpa velit provident nulla omnis fuga exercitationem!
+    </div>
+    <div class="box_special">
+        <div class="title_box_special" style="padding: 15px 20px;">
+            <div class="name_bds bold_title_box"><b>Nhà số A1</b></div>
+            <div class="address_bds" style="padding-top: 12px;"><i class='fa fa-map-marker' aria-hidden='true'></i> 275 Trần Quốc Hoàn, Bắc Từ Liêm</div>           
+        </div>
+        <div class="imgBDS">
+            <img src="../image/image-retail-1.jpg" alt="detail"  style="width: 100%;">
+        </div>
+        <div class="info_cus" style="padding: 15px 20px;">
+            <div class="name_cus bold_title_box info_cus_line"><b>Nguyễn Đức Tới</b></div>
+            <div class="sdt_cus but_info_cus info_cus_line">Giá: ~6.5 tỷ</div><br>
+            <div class="email_cus but_info_cus">phuoail.com</div>
+        </div>
+    </div>
     <?php 
         include "menu.php";
         if (!isset($_SESSION["permission"]) || $_SESSION["permission"] == 0) {

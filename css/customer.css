@@ -97,6 +97,7 @@
 #customers {
     border-collapse: collapse;
     width: 100%;
+    margin-bottom: 15px;
 }
   
 #customers td, #customers th {
@@ -114,4 +115,36 @@
     text-align: left;
     background-color: #4CAF50;
     color: white;
+}
+
+.box_special {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+
+    background-color: white;
+    /* width: 20%; */
+    /* height: 100px; */
+    /* margin-top: 00px; */
+    /* margin-left: 100px; */
+    font-size:16px;
+}
+
+.bold_title_box {
+    font-size:22px;
+}
+
+.info_cus_line {
+    margin-bottom: 7px;;
+}
+
+.but_info_cus {
+    background-color: rgb(17,17,17);
+    padding: 7px 7px;
+    display: inline-block;
+    color: white;
+    border-radius: 5px;
+}
+
+#tab2 {
+    background-color: white;
 }

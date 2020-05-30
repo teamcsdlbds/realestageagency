@@ -58,7 +58,7 @@
                             echo "<div class='info'>";
                                 echo "<div class='bed'><i class='fa fa-bed' aria-hidden='true'></i> " . $row["room"] . "</div>";
                                 echo "<div class='bath'><i class='fa fa-bath' aria-hidden='true'></i> " . $row["wc"] . "</div>";
-                                echo "<div class='area'><i class='fa fa-home' aria-hidden='true'></i> " . $row["area"] . "</div>";
+                                echo "<div class='area'><i class='fa fa-home' aria-hidden='true'></i> " . $row["area"] . " m2</div>";
                             echo "</div>";
                         echo "</div>";
                     $rows++;
@@ -105,7 +105,7 @@
                             echo "<div class='info'>";
                                 echo "<div class='bed'><i class='fa fa-bed' aria-hidden='true'></i> " . $row["room"] . "</div>";
                                 echo "<div class='bath'><i class='fa fa-bath' aria-hidden='true'></i> " . $row["wc"] . "</div>";
-                                echo "<div class='area'><i class='fa fa-home' aria-hidden='true'></i> " . $row["area"] . "</div>";
+                                echo "<div class='area'><i class='fa fa-home' aria-hidden='true'></i> " . $row["area"] . " m2</div>";
                             echo "</div>";
                         echo "</div>";
                     $rows++;

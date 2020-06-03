@@ -1,11 +1,11 @@
 .content {
-    margin-left: 20%;
-    margin-right: 20%;
-    width: 60%;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
     padding-top: 90px;
-    background: #ecf0f1;
-    padding-left: 15px;
-    padding-right: 15px;
+    /* background: #ecf0f1; */
+    /* padding-left: 15px; */
+    /* padding-right: 15px; */
 }
 
 .image-title {
@@ -25,7 +25,8 @@
 
 
 .body-content {
-    background: #bdc3c7;
+    /* background: #bdc3c7; */
+    background: rgb(238, 238, 238);
 }
 
 

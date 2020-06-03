@@ -37,7 +37,7 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non ipsa excepturi, co
         } else {
             include "connection.php";
             $userName = $_SESSION["userName"];
-            $query = "SELECT Customers.name as 'Tên khách hàng', Customers.email as 'email', Customers.phone as 'SĐT', RealEstates.name as 'BĐS', RealEstates.url_img as 'IMG', RealEstates.address as 'add' FROM RealEstates, FavoriteRealEstates, Customers WHERE RealEstates.userNameAgency = '$userName' AND RealEstates.id = FavoriteRealEstates.idRealEstate AND FavoriteRealEstates.userNameCustomer = Customers.userName";
+            $query = "SELECT Customers.name as 'Tên khách hàng', Customers.email as 'email', Customers.phone as 'SĐT', RealEstates.name as 'BĐS', RealEstates.url_img as 'IMG', RealEstates.address as 'add', RealEstates.id as 'ID' FROM RealEstates, FavoriteRealEstates, Customers WHERE RealEstates.userNameAgency = '$userName' AND RealEstates.id = FavoriteRealEstates.idRealEstate AND FavoriteRealEstates.userNameCustomer = Customers.userName";
             $result = $connection->query($query);
             if ($connection->connect_error) {
                 echo "<script type='text/javascript'>alert('Vui lòng thử lại sau!');</script>";
@@ -61,7 +61,8 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non ipsa excepturi, co
                         echo "<div class=\"address_bds\" style=\"padding-top: 12px;\"><i class='fa fa-map-marker' aria-hidden='true'></i>"." ".$row["add"]."</div>";
                         echo "</div>";
                         echo "<div class=\"imgBDS\">";
-                        echo "<img src=\"../".$row["IMG"]."\" style=\"width: 100%;\">";
+                        echo "<a href=\"/detail/" . $row["ID"]. "\">";
+                        echo "<img src=\"../".$row["IMG"]."\" style=\"width: 100%;\"></a>";
                         echo "</div>";
                         echo "<div class=\"info_cus\" style=\"padding: 15px 20px;\">";
                         echo "<div class=\"name_cus bold_title_box info_cus_line\"><b>".$row["Tên khách hàng"]."</b></div>";

@@ -17,7 +17,7 @@
         $request = $_SERVER['REQUEST_URI'];
         $idDetail = (int) filter_var($request, FILTER_SANITIZE_NUMBER_INT);
         include "connection.php";
-        $query = "SELECT * from Details where id='$idDetail';";
+        $query = "SELECT * from RealEstates where id='$idDetail';";
         $result = $connection->query($query);
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();

@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate Agency | Quản lý BĐS</title>
+    <title>Quản lý BĐS</title>
     <link rel="stylesheet" href="../css/my-details.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/grid.css">
@@ -11,7 +11,7 @@
 
 </head>
 <body>
-<div class="temp" style="padding-top: 50px;">
+<!-- <div class="temp" style="padding-top: 50px;">
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo laudantium molestiae repudiandae dolorem ipsa necessitatibus ducimus at, ea ipsam minima quae, excepturi dicta! Expedita earum odio aliquam quaerat modi voluptate.
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non ipsa excepturi, consequatur dignissimos, quisquam dolorum rerum debitis fugit aperiam optio reiciendis. Est ab culpa velit provident nulla omnis fuga exercitationem!
     </div>
@@ -24,11 +24,14 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non ipsa excepturi, co
             <img src="../image/image-retail-1.jpg" alt="detail"  style="width: 100%;">
         </div>
         <div class="info_cus" style="padding: 15px 20px;">
-            <div class="name_cus bold_title_box info_cus_line"><b>Nguyễn Đức Tới</b></div>
-            <div class="sdt_cus but_info_cus info_cus_line">Giá: ~6.5 tỷ</div><br>
-            <div class="email_cus but_info_cus">phuoail.com</div>
+            <div class='info'>
+                <div class='bed'><i class='fa fa-bed' aria-hidden='true'></i> 4 </div>
+                <div class='bath'><i class='fa fa-bath' aria-hidden='true'></i> 4 </div>
+                <div class='area'><i class='fa fa-home' aria-hidden='true'></i> 645 m2</div>
+            </div>
+            <div class="sdt_cus but_info_cus info_cus_line" style="margin-top: 15px;">Giá: ~6.5 tỷ</div>
         </div>
-    </div>
+    </div> -->
     <?php
         include "menu.php";
         if (!isset($_SESSION["permission"]) || $_SESSION["permission"] == 0) {
@@ -45,28 +48,39 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non ipsa excepturi, co
             echo "<div class='body-content'><div class='content'> ";
             echo "<div class='box-title'> <h2 class='title-h2 title'>Quản lý Bất động sản</h2> </div>";
             if ($result->num_rows > 0) {
+                $num_box = 0;
                 while ($row = $result->fetch_assoc()) {
-                    echo "<hr><div class='row item'>";
-                        echo "<div class='col span-1-of-3 col1'>";
-                            echo "<img src=\"../" . $row["url_img"] . "\"" . " alt='retail' class='image'>";
+                    if ($num_box == 0) {
+                        echo "<div class=\"row\">";
+                    }
+                    echo "<div class=\"box_special col span-1-of-3\">";
+                        echo "<div class=\"title_box_special\" style=\"padding: 15px 20px;\">";
+                            echo "<div class=\"name_bds bold_title_box\"><b>".$row["name"]."</b></div>";
+                            echo "<div class=\"address_bds\" style=\"padding-top: 12px;\"><i class='fa fa-map-marker' aria-hidden='true'></i>"." ". $row["address"]."</div>";
                         echo "</div>";
-                        echo "<div class='col span-2-of-3 col2'>";
-                            echo "<div class=\"image-title\"><b>".$row["name"]."</b></div>";
-                            echo "<div class=\"location\">";
-                                echo "<i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> ".$row["address"];
+                        echo "<div class=\"imgBDS\">";
+                            echo "<a href=\"/detail/" . $row["id"]. "\">";
+                            echo "<img src=\"../".$row["url_img"]."\" style=\"width: 100%;\"></a>";
+                        echo "</div>";
+                        echo "<div class=\"info_cus\" style=\"padding: 15px 20px;\">";
+                            echo "<div class='info'>";
+                                echo "<div class='bed' style=\"padding-left:5px;\"><i class='fa fa-bed' aria-hidden='true'></i>"." ".$row["room"]."</div>";
+                                echo "<div class='bath'><i class='fa fa-bath' aria-hidden='true'></i> "." ".$row["wc"]." </div>";
+                                echo "<div class='area'><i class='fa fa-home' aria-hidden='true'></i>"." ".$row["area"]."m2</div>";
                             echo "</div>";
-                            echo "<div class=\"price\">";
-                                echo "<b>Giá: ~ ".$row["price"]." tỷ </b>";
-                            echo "</div>";
-                            echo "<div class=\"info\">";
-                                echo "<div class=\"bed\"><i class=\"fa fa-bed\" aria-hidden=\"true\"></i> ".$row["room"]."</div>";
-                                echo "<div class=\"bath\"><i class=\"fa fa-bath\" aria-hidden=\"true\"></i> ".$row["wc"]."</div>";
-                                echo "<div class=\"area\"><i class=\"fa fa-home\" aria-hidden=\"true\"></i> ".$row["area"]."m2</div>";
-                            echo "</div>";
+                            echo "<div class=\"sdt_cus but_info_cus info_cus_line\" style=\"margin-top: 15px;\"> Giá: ~".$row["price"] . ($row["type"]==0 ? " tỷ":" triệu/tháng")."</div>";
+                            echo "<div class=\"sdt_cus but_info_cus info_cus_line\" style=\"margin-top: 15px; margin-left: 15px\">#".($row["type"]==0 ? "Bán":"Cho thuê")."</div>";
                         echo "</div>";
                     echo "</div>";
+                    $num_box++;
+                    if ($num_box == 3) {
+                        echo "</div>";
+                        $num_box = 0;
+                    }
                 }
-
+                if ($num_box > 0) {
+                    echo "</div>";
+                }
             } else {
                 echo "Chưa có bất động sản nào!";
             }

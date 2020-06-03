@@ -15,7 +15,7 @@
         <h2 class="title-h2">Nhà lẻ bán</h2>
         <?php
             include "connection.php";
-            $query = "SELECT * FROM Details WHERE Details.type = 0";
+            $query = "SELECT * FROM RealEstates WHERE RealEstates.type = 0";
             $result = $connection->query($query);
             if ($connection->connect_error) {
                 header('Location: ../app/home.php');

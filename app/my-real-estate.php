@@ -36,7 +36,7 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non ipsa excepturi, co
         } else {
             include "connection.php";
             $userName = $_SESSION["userName"];
-            $query = "SELECT * FROM Details WHERE Details.userNameAgency = '$userName'";
+            $query = "SELECT * FROM RealEstates WHERE RealEstates.userNameAgency = '$userName'";
             $result = $connection->query($query);
             if ($connection->connect_error) {
                 echo "<script type='text/javascript'>alert('Vui lòng thử lại sau!');</script>";

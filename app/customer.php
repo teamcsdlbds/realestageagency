@@ -37,14 +37,13 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non ipsa excepturi, co
         } else {
             include "connection.php";
             $userName = $_SESSION["userName"];
-            $query = "SELECT Customers.name as 'Tên khách hàng', Customers.email as 'email', Customers.phone as 'SĐT', Details.name as 'BĐS', Details.url_img as 'IMG', Details.address as 'add' FROM Details, FavoriteDetails, Customers WHERE Details.userNameAgency = '$userName' AND Details.id = FavoriteDetails.idDetail AND FavoriteDetails.userNameCustomer = Customers.userName";
+            $query = "SELECT Customers.name as 'Tên khách hàng', Customers.email as 'email', Customers.phone as 'SĐT', RealEstates.name as 'BĐS', RealEstates.url_img as 'IMG', RealEstates.address as 'add' FROM RealEstates, FavoriteRealEstates, Customers WHERE RealEstates.userNameAgency = '$userName' AND RealEstates.id = FavoriteRealEstates.idRealEstate AND FavoriteRealEstates.userNameCustomer = Customers.userName";
             $result = $connection->query($query);
             if ($connection->connect_error) {
                 echo "<script type='text/javascript'>alert('Vui lòng thử lại sau!');</script>";
                 header('Location: ../app/home.php');
             } 
             echo "<div class='body-cus'> <div class='content'> ";
-            
             echo "<div class=\"tab box-title\">";
                 echo "<button id=\"tab-default\" class=\"tablinks title-h2 title\" onclick=\"openTab(event, 'tab1')\"><b>Quản lý khách hàng</b></button>";
                 echo "<button class=\"tablinks title-h2 title\" onclick=\"openTab(event, 'tab2')\"><b>Danh sách khách hàng</b></button>";
@@ -91,7 +90,7 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non ipsa excepturi, co
                     echo "<th>SĐT</th>";
                     echo "<th>Email</th>";
                 echo "</tr>";
-                $query = "SELECT DISTINCT Customers.name as 'Tên khách hàng', Customers.birthday as 'Ngày sinh', Customers.sex as 'Giới tính', Customers.phone as 'SĐT', Customers.email as 'Email' FROM Details, FavoriteDetails, Customers WHERE Details.userNameAgency = '$userName' AND Details.id = FavoriteDetails.idDetail AND FavoriteDetails.userNameCustomer = Customers.userName";
+                $query = "SELECT DISTINCT Customers.name as 'Tên khách hàng', Customers.birthday as 'Ngày sinh', Customers.sex as 'Giới tính', Customers.phone as 'SĐT', Customers.email as 'Email' FROM RealEstates, FavoriteRealEstates, Customers WHERE RealEstates.userNameAgency = '$userName' AND RealEstates.id = FavoriteRealEstates.idRealEstate AND FavoriteRealEstates.userNameCustomer = Customers.userName";
                 $result = $connection->query($query);
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr>";
@@ -109,7 +108,6 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non ipsa excepturi, co
             echo "</div> </div>";
         }
     ?>
-    <?php include "footer.php";?>
 <script>
 function openTab(evt, typeTab) {
     var i, tabcontent, tablinks;

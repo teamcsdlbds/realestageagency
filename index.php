@@ -39,10 +39,10 @@
                 require __DIR__ . '/app/customer.php';
                 break;
             case '/quan-ly-bds' :
-                require __DIR__ . '/app/my-details.php';
+                require __DIR__ . '/app/my-real-estate.php';
                 break;
             case '/bds-quan-tam' :
-                require __DIR__ . '/app/favorite-details.php';
+                require __DIR__ . '/app/favorite-real-estate.php';
                 break;
             // case '/retails.php' :
             //     require __DIR__ . '/app/retails.php';

@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["address"] = $row["address"];
             $_SESSION["birthday"] = $row["birthday"];
             $_SESSION["url_avt"] = $row["url_avt"];
-            header('Location: /');
+            header('Location: /tai-khoan');
         } else {
             $query = "SELECT * from Customers where userName='$userName' and password='$password';";
             $result = $connection->query($query);
@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["address"] = $row["address"];
                 $_SESSION["birthday"] = $row["birthday"];
                 $_SESSION["url_avt"] = $row["url_avt"];
-                header('Location: /');
+                header('Location: /tai-khoan');
             }
             else {
                 echo "<script type='text/javascript'>alert('Đăng nhập lại!');</script>";

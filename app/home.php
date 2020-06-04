@@ -1,4 +1,5 @@
 <html style="scroll-behavior: smooth;">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,21 +7,25 @@
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/grid.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <?php include "menu.php";?>
-    <header class="header-home"  style="margin-top: 70px;"> 
-    <div class="content-header" style="text-align: center; color: white;">
-        <h1 class="" style="line-height: 50px; padding-top:40vh">BẤT ĐỘNG SẢN</h1>
-        <div class="" style="padding: 15px 20%">Kết nối, hỗ trợ khách hàng những thông tin bất động sản tốt nhất<br>
-            Gắn kết tạo nên một môi trường tuyệt vời về mua bán bất động sản<br>
-        </div>   
-        <a href="#nextsection"><i class="fa fa-arrow-circle-down" style="margin-top: 40px;font-size:70px;color: #ccc;"></i></a>
-    </div>
+    <header class="header-home" style="margin-top: 70px;">
+        <div class="content-header" style="text-align: center; color: white;">
+            <h1 class="" style="line-height: 50px; padding-top:40vh">BẤT ĐỘNG SẢN</h1>
+            <div class="" style="padding: 15px 20%">Kết nối, hỗ trợ khách hàng những thông tin bất động sản tốt nhất<br>
+                Gắn kết tạo nên một môi trường tuyệt vời về mua bán bất động sản<br>
+            </div>
+            <a href="#nextsection"><i class="fa fa-arrow-circle-down"
+                    style="margin-top: 40px;font-size:70px;color: #ccc;"></i></a>
+        </div>
     </header>
-    <section class="section-news events"  id="nextsection">
+    <section class="section-news events" id="nextsection">
         <h2 class="title-h2">Sự kiện nổi bật</h2>
         <div class="row">
             <div class="col span-1-of-3 cell">
@@ -130,4 +135,5 @@
     </section>
     <?php include "footer.php";?>
 </body>
+
 </html>

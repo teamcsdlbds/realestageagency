@@ -1,8 +1,9 @@
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BĐS quan tâm</title>
+    <link rel="shortcut icon" href="https://www.mitdream.com/wp-content/uploads/2019/12/house-2.png"/>
     <link rel="stylesheet" href="../css/my-details.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/grid.css">

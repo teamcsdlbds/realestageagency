@@ -14,6 +14,11 @@
 </head>
 <body>
     <?php 
+        if (!isset($_SESSION["permission"])) {
+            include "prohibit.php";
+        } 
+    ?>
+    <?php 
         include "menu.php";
     ?>
     <div class="frame">
@@ -24,15 +29,22 @@
             <a href="/app/logout.php">Đăng xuất</a>
             <!-- finished -->
         </div>
+        <?php 
+            if ($_SESSION["permission"] == 1) {
+                echo "<div class=\"function-box box-2\">";
+                    echo "<a href=\"/khach-hang\">Quản lý khách hàng</a>";
+                echo "</div>";
+                echo "<div class=\"function-box box-2\">";
+                    echo "<a href=\"/quan-ly-bds\">Quản lý BĐS</a>";
+                echo "</div>";
+            } else {
+                echo "<div class=\"function-box box-2\">";
+                    echo "<a href=\"/bds-quan-tam\">BĐS quan tâm</a>";
+                echo "</div>";
+            }
+        ?>
         <div class="function-box box-2">
-            <a href="/khach-hang">Quản lý khách hàng</a>
-            <!-- finished -->
-        </div>
-        <div class="function-box box-2">
-            <a href="/quan-ly-bds">Quản lý BĐS</a>
-        </div>
-        <div class="function-box box-2">
-            <a href="/bds-quan-tam">BĐS quan tâm</a>
+            <a href="/lich-hen">Lịch hẹn của tôi</a>
         </div>
     </div>
 </body>

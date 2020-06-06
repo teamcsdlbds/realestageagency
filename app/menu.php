@@ -16,7 +16,6 @@
         <li><a href= "/" class="menu-item">Trang chủ</a></li>
         <li><a href= "/mua-nha" class="menu-item">Mua nhà</a></li>
         <li><a href= "/thue-nha" class="menu-item">Thuê nhà</a></li>
-        <li><a href="/moi-gioi" class="menu-item">Môi giới</a></li>
         <?php 
             if (isset($_SESSION["permission"]))
                 echo "<li><a href=\"/tai-khoan\" class=\"menu-item\">" .$_SESSION['name']."</a></li>";

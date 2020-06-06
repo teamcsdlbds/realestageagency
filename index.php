@@ -32,6 +32,9 @@
             case '/dang-ky' :
                 require __DIR__ . '/app/signup.php';
                 break;
+            case '/lich-hen' :
+                require __DIR__ . '/app/schedule-appointment.php';
+                break;
             case '/chinh-sua-thong-tin' :
                 require __DIR__ . '/app/edit-account.php';
                 break;

@@ -61,13 +61,40 @@
     background: #2b61c5;
 }
 
-a {
+.a1 {
     color:#2b86c5;
     text-align: center;
     display: block;
     font-size: 15px;
 }
 
-a:hover, a:active {
+.a1:hover, .a1:active {
     color: #2b61c5;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.alert-dismissible {
+    padding-right: 35px;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    /* text-align: justify; */
+}
+
+a {
+    color: #2b86c5;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    float: right !important;
+    text-decoration: none;
 }

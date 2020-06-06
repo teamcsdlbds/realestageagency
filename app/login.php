@@ -11,6 +11,8 @@ session_start();
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/grid.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 <?php
@@ -77,6 +79,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <?php include "menu.php";?>
+<div class="alert alert-success alert-dismissible" style="margin-top: 100px; width: 300px; float: right; margin-right: 20px; ">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong style="padding-bottom: 50px;">Tài khoản đăng nhập thử!</strong> <br> 
+    <strong>Khách hàng: </strong> <br> username: testcustomer <br> password: 123456789<br> 
+    <strong>Môi giới: </strong> <br> username: testagency <br> password: 123456789<br> 
+</div>
 <section class="section-news"  style="margin-top: 80px;">
     <form method="post" action="/app/login.php" class="login-box">
         <h1>Đăng nhập</h1>
@@ -89,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="password" placeholder="Password" name="password" value="">
         </div>
         <input class="btn" type="submit" name="login" value="Đăng nhập">
-        <a href="/dang-ky">Đăng ký khách hàng mới?</a>
+        <a href="/dang-ky" class = "a1" style="float: none !important; ">Đăng ký khách hàng mới?</a>
     </form>
 </section>
 </body>

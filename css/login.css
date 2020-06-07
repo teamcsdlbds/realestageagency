@@ -95,6 +95,6 @@ a {
     text-align: center;
     display: inline-block;
     font-size: 15px;
-    float: right !important;
+    /* float: right !important; */
     text-decoration: none;
 }

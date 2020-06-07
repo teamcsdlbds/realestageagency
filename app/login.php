@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <?php include "menu.php";?>
-<div class="alert alert-success alert-dismissible" style="margin-top: 100px; width: 300px; float: right; margin-right: 20px; ">
+<div class="alert alert-success alert-dismissible" style="margin-top: 100px; width: 300px; margin-left: 20px; ">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     <strong style="padding-bottom: 50px;">Tài khoản đăng nhập thử!</strong> <br> 
     <strong>Khách hàng: </strong> <br> username: testcustomer <br> password: 123456789<br> 

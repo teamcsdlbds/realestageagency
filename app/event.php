@@ -42,7 +42,6 @@ if ($result->num_rows > 0) {
     echo "<hr>";
     echo "<div class=\"row\">";
     echo "<div class=\"col span-2-of-3 body-detail\">";
-    echo "<hr>";
     echo "<div class=\"main-info\">";
     echo "</div>";
     echo "<h4>Mô tả</h4><hr>";

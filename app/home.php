@@ -30,13 +30,19 @@
         <h2 class="title-h2">Sự kiện nổi bật</h2>
         <div class="row">
             <div class="col span-1-of-3 cell">
-                <img src="../image/img-event-001.jpg" alt="event" class="image">
+                <a href="/event/1">
+                    <img src="../image/img-event-001.jpg" alt="event" class="image">
+                </a>
             </div>
             <div class="col span-1-of-3 cell">
-                <img src="../image/img-event-002.jpg" alt="event" class="image">
+                <a href="/event/2">
+                    <img src="../image/img-event-002.jpg" alt="event" class="image">
+                </a>
             </div>
             <div class="col span-1-of-3 cell">
-                <img src="../image/img-event-003.jpg" alt="event" class="image">
+                <a href="/event/3">
+                    <img src="../image/img-event-003.jpg" alt="event" class="image">
+                </a>
             </div>
         </div>
     </section>

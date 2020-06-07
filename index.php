@@ -5,7 +5,9 @@
     if (preg_match("/^\/detail\/\d+$/", $request)) {
         require __DIR__ . '/app/detail.php';
     }
-        
+    else if (preg_match("/^\/event\/\d+$/", $request)) {
+        require __DIR__ . '/app/event.php';
+    }
     else {
         switch ($request) {
             case '/' :

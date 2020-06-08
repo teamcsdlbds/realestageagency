@@ -97,7 +97,7 @@ $(document).ready(function() {
         else if(option.val() == "4") area_desc = option.val();
 
         $.ajax({
-            url:"../app/fetch_data.php",
+            url:"../app/fetch_data_0.php",
             method:"POST",
             data: {
                 action:action, 
@@ -158,6 +158,6 @@ $(document).ready(function() {
         filter_data();
     });
     
-})
+});
 </script>
 </html>

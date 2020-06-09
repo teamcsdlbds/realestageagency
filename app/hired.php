@@ -82,15 +82,15 @@
             </div>
             <div class="col span-1-of-6 cell" style="padding-left: 10px;">
                 <div class="box-room-check" style="display: none;">
-                    <h3>Phòng ngủ, WC</h3>
+                    <h3>Phòng ngủ</h3>
                     <div class="list-group-item checkbox" style="padding-top: 5px;">
-                        <label><input type="checkbox" class="common_selector room" value="3"> 3 PN, 3 WC</label>
+                        <label><input type="checkbox" class="common_selector room" value="3"> 3</label>
                     </div>
                     <div class="list-group-item checkbox" style="padding-top: 5px;">
-                        <label><input type="checkbox" class="common_selector room" value="4"> 4 PN, 4 WC</label>
+                        <label><input type="checkbox" class="common_selector room" value="4"> 4</label>
                     </div>
                     <div class="list-group-item checkbox" style="padding-top: 5px;">
-                        <label><input type="checkbox" class="common_selector room" value="5"> 5 PN, 5 WC</label>
+                        <label><input type="checkbox" class="common_selector room" value="5"> 5</label>
                     </div>
                 </div>
             </div>

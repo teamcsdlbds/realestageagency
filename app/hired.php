@@ -25,48 +25,75 @@
                 header('Location: ../app/home.php');
             }
         ?>
-        <div class="container" style="border-style:ridge; border-radius:10px; background-color:rgb(231,229,255);">
-            <div class="row" id="filter" style="margin: 15px 20px;">
-                <div class="col span-1-of-3 cell" style="text-align:center;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="col span-1-of-6 cell" style="border-style: solid; border-radius: 5px; border-width: thin;">
+                        <div id="box-price">
+                            <div class="main-price" style="margin: 5px;"><span id="amount">Khoảng giá</span><i class="fa fa-caret-down" style="float: right; margin-right: 5px;"></i></div>
+                        </div>
+                    </div>
+                    
+                    <div class="col span-1-of-6 cell" style="border-style: solid; border-radius: 5px; border-width: thin;">
+                        <div id="box-area">
+                            <div class="main-area" style="margin: 5px;"><span id="amount" style="margin: 5px;">Diện tích</span><i class="fa fa-caret-down" style="float: right;margin-right: 5px;"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="col span-1-of-6 cell" style="border-style: solid; border-radius: 5px; border-width: thin;">
+                        <div id="box-room">
+                            <div class="main-room" style="margin: 5px;"><span id="amount" style="margin: 5px;">Số phòng ngủ</span><i class="fa fa-caret-down" style="float: right; margin-right: 5px;"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="web-sorting" style="text-align: right; margin: 20px;">
+                    <select id="sorting">
+                        <option value="">- Sắp xếp theo -</option>
+                        <option value="1">Giá tăng dần</option>
+                        <option value="2">Giá giảm dần</option>
+                        <option value="3">Diện tích tăng dần</option>
+                        <option value="4">Diện tích giảm dần</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-6 cell" style="padding-left: 5px;">
+                <div class="box-price-range" style="display: none;">
                     <h3>Giá thuê</h3>
                     <div id="price-slide">
                         <input type="hidden" id="hidden_minimum_price" value="5" />
                         <input type="hidden" id="hidden_maximum_price" value="40" />
                         <p id="price_show">5 - 40 triệu/tháng</p>
-                        <div id="price_range" style="margin-top:10px;"></div>
+                        <div id="price_range" style="margin-top: 10px;"></div>
                     </div>
                 </div>
-                <div class="col span-1-of-3 cell" style="text-align:center; padding-left:20px;">
+            </div>
+            <div class="col span-1-of-6 cell" style="padding-left: 11px;">
+                <div class="box-area-range" style="display: none;">
                     <h3>Diện tích</h3>
                     <div id="area-slide">
                         <input type="hidden" id="hidden_minimum_area" value="65" />
                         <input type="hidden" id="hidden_maximum_area" value="150" />
                         <p id="area_show">65 - 150 m2</p>
-                        <div id="area_range" style="margin-top:10px;"></div>
+                        <div id="area_range" style="margin-top: 10px;"></div>
                     </div>
                 </div>
-                <div class="col span-1-of-3 cell" style="text-align:center;">
+            </div>
+            <div class="col span-1-of-6 cell" style="padding-left: 10px;">
+                <div class="box-room-check" style="display: none;">
                     <h3>Phòng ngủ, WC</h3>
-                    <div class="list-group-item checkbox" style="padding-top:5px;">
+                    <div class="list-group-item checkbox" style="padding-top: 5px;">
                         <label><input type="checkbox" class="common_selector room" value="3"> 3 PN, 3 WC</label>
                     </div>
-                    <div class="list-group-item checkbox" style="padding-top:5px;">
+                    <div class="list-group-item checkbox" style="padding-top: 5px;">
                         <label><input type="checkbox" class="common_selector room" value="4"> 4 PN, 4 WC</label>
                     </div>
-                    <div class="list-group-item checkbox" style="padding-top:5px;">
+                    <div class="list-group-item checkbox" style="padding-top: 5px;">
                         <label><input type="checkbox" class="common_selector room" value="5"> 5 PN, 5 WC</label>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="web-sorting" style="text-align:right; margin:20px;">
-            <select id="sorting">
-                <option selected disabled>- Sắp xếp theo -</option>
-                <option value="1">Giá tăng dần</option>
-                <option value="2">Giá giảm dần</option>
-                <option value="3">Diện tích tăng dần</option>
-                <option value="4">Diện tích giảm dần</option>
-            </select>
         </div>
         <div class="row filter_data"></div>
     </section>
@@ -121,6 +148,15 @@ $(document).ready(function() {
         });
         return filter;
     }
+    $('.main-price').click(function() {
+        $('.box-price-range').slideToggle();
+    });
+    $('.main-area').click(function() {
+        $('.box-area-range').slideToggle();
+    });
+    $('.main-room').click(function() {
+        $('.box-room-check').slideToggle();
+    });
     $('.common_selector').click(function() {
         filter_data();
     });

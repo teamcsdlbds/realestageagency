@@ -39,9 +39,10 @@ html {
 
 .image {
     width: 100%;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     transition: all 0.2s;
     margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 .cell {
@@ -53,10 +54,8 @@ html {
 .image:hover,
 .image:active {
     cursor: pointer;
-    -ms-transform: scale(1.15); 
-    -webkit-transform: scale(1.15); 
-    transform: scale(1.15);
-
+    opacity: 0.9;
+    filter: drop-shadow(8px 8px 10px gray);
 }
 
 .logo {
